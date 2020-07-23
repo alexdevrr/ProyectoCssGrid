@@ -1,0 +1,305 @@
+* {
+  list-style: none;
+  text-decoration: none;
+  /* Para el modo noche */
+  /* background: #222831; */
+}
+@import url("https://css.gg/css?=|link");
+/* Fuentes */
+@font-face {
+  font-family: "TrebuchetMS";
+  src: url("./recursos/fonts/TrebuchetMS.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "BebasNeue";
+  src: url("./recursos/fonts/BebasNeue.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+#website {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  /* La primera columna tiene de alto 150px, la segunda tiene 70px y así sucesivamente */
+  grid-template-rows: 150px 50px 425px 1fr 70px;
+  width: 95%;
+  height: auto;
+  margin: 0px auto;
+  border: 1px solid #ccc;
+}
+/* Cabecera */
+#cabecera {
+  grid-column: 1 / 8;
+  font-family: "BebasNeue";
+  letter-spacing: 10px;
+  text-align: center;
+  box-shadow: 0px 0px 2px gray;
+  background-color: #222831;
+  color: white;
+  padding: 20px;
+  padding-top: 40px;
+  text-shadow: 0px 2px 4px black;
+}
+/* Menu */
+#menu {
+  grid-column: 1 / 8;
+  background: #32e0c4;
+  font-family: "TrebuchetMS";
+}
+#menu ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+  line-height: 50px;
+}
+#menu li a {
+  /* Hace que funcione el hover */
+  display: block;
+  color: #393e46;
+  transition: all 200ms;
+}
+/* Efecto de zoom para el texto */
+#menu ul li a:hover {
+  color: #c4fb6d;
+  transform: scale(1.2, 1.2);
+  text-decoration: none;
+}
+/* Contenido */
+#contenido {
+  grid-column: 1 / 7;
+  /* Se puede hacer un grid dentro de otro */
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 25px;
+  padding: 20px;
+}
+#slidera {
+  background: #393e46;
+  grid-column: 1 / 8;
+}
+#slidera img {
+  display: grid;
+  grid-column: 1 / 8;
+  height: 425px;
+  width: 100%;
+  text-align: center;
+}
+
+#contenido article {
+  display: grid;
+  border: 1px solid #393e46;
+  background: #eeeeee;
+  padding-top: 6px;
+  transition: all 300ms;
+}
+#contenido article:hover {
+  border: 1px solid #393e46;
+  background: #393e46;
+  transform: scale(1.1, 1.1);
+  cursor: pointer;
+  color: white;
+}
+
+/* Imagenes */
+.imgcont {
+  width: 100%;
+  height: 240px;
+  text-align: center;
+  margin-top: -9px;
+}
+#contenido .parra {
+  display: block;
+  height: 78px;
+  font-size: 13px;
+  text-justify: center;
+  margin-top: -3px;
+  text-align: center;
+}
+#contenido h4 {
+  text-align: center;
+  margin-top: -6px;
+  color: white;
+  background: #393e46;
+  transition: all 200ms;
+}
+
+/* Barra lateral */
+#lateral {
+  grid-column: 7 / 8;
+  background: #e7305b;
+  text-align: center;
+}
+
+#lateral a {
+  font-size: 25px;
+  color: black;
+}
+#lateral .cosas:first-child {
+  padding-top: 15px;
+}
+#lateral .cosas a:hover {
+  color: black;
+  text-decoration: none;
+}
+/* Efecto neon para lateral*/
+.neon {
+  font-size: 100px;
+  letter-spacing: -2px;
+  text-shadow: 0 0 5px rgb(202, 168, 168), 0 0 10px #fff, 0 0 15px #222831,
+    0 0 20px #0c0a0c, 0 0 25px #fff;
+  -webkit-text-fill-color: #32e0c4;
+  -webkit-text-stroke-color: #c546f7;
+  -webkit-text-stroke-width: 0.2px;
+  transition: all 300ms;
+}
+/* Efecto neon para lateral (hover)*/
+.neon:hover {
+  font-size: 100px;
+  letter-spacing: -2px;
+  text-shadow: 0 0 5px rgb(202, 168, 168), 0 0 10px #fff, 0 0 15px #fff,
+    0 0 20px #0c0a0c, 0 0 25px #332c32;
+  -webkit-text-fill-color: #fff;
+  -webkit-text-stroke-color: #c546f7;
+  -webkit-text-stroke-width: 0.2px;
+}
+
+#footer {
+  grid-column: 1 / 8;
+  background: #222831;
+  color: #32e0c4;
+  padding-top: 25px;
+  text-align: center;
+}
+
+@media (max-width: 1262px) {
+  #contenido {
+    grid-column: 1 / 5;
+    /* Se puede hacer un grid dentro de otro */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: #f4f6ff;
+    grid-gap: 25px;
+    padding: 20px;
+  }
+}
+@media (max-width: 1262px) {
+  /* Contenido */
+  #contenido {
+    grid-column: 1 / 7;
+    /* Se puede hacer un grid dentro de otro */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: #f4f6ff;
+    grid-gap: 25px;
+    padding: 20px;
+  }
+  #contenido article:hover {
+    border: 1px solid #393e46;
+    background: #05dfd7;
+    cursor: pointer;
+    color: white;
+  }
+  #contenido .parra {
+    display: block;
+    height: 90px;
+    margin-top: -5px;
+    padding-top: 7px;
+  }
+  #lateral {
+    grid-column: 7 / 8;
+    background: #e7305b;
+  }
+}
+@media (max-width: 994px) {
+  /* Contenido */
+  #contenido {
+    grid-column: 1 / 8;
+    /* Se puede hacer un grid dentro de otro */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background: #f4f6ff;
+    grid-gap: 25px;
+    padding: 20px;
+  }
+  #contenido article {
+    transition: all 400ms;
+  }
+  #contenido article:hover {
+    background: #393e46;
+    cursor: pointer;
+    transform: none;
+    color: #05dfd7;
+  }
+  img {
+    width: 50%;
+    height: 90%;
+  }
+  #lateral {
+    display: none;
+  }
+
+  #footer {
+    grid-column: 1 / 8;
+    background: #222831;
+    color: #32e0c4;
+    padding-top: 25px;
+    align-items: center;
+  }
+}
+hr {
+  border: 1px solid #05aca6;
+}
+@media (max-width: 697px) {
+  /* Contenido */
+  #contenido {
+    grid-column: 1 / 8;
+    /* Se puede hacer un grid dentro de otro */
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    background: #f4f6ff;
+    grid-gap: 25px;
+    padding: 20px;
+  }
+}
+@media (max-width: 561px) {
+  #website {
+    display: grid;
+    grid-template-rows: 140px 190px;
+    height: auto;
+    margin: 0px auto;
+    border: 1px solid #ccc;
+  }
+  #menu ul {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    float: left;
+    line-height: 44px;
+  }
+  #menu ul li {
+    text-decoration: black;
+    padding: -80px;
+  }
+  #contenido .parra {
+    height: 111px;
+  }
+}
+@media (max-width: 360px) {
+  #website {
+    display: grid;
+    grid-template-rows: 140px 190px;
+    height: auto;
+    margin: 0px auto;
+    border: 1px solid #ccc;
+  }
+  #contenido article {
+    cursor: pointer;
+    color: black;
+  }
+}
